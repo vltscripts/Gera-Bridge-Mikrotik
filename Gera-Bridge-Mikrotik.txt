@@ -1,0 +1,5 @@
+/interface bridge add name=bridge1
+delay 2s;
+/interface bridge port
+:for i from=1 to=24 do={ add interface=("ether" . $i . "") bridge=bridge1
+}
